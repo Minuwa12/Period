@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ඔයා වෙනුවෙන් ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #5a3a3a;
+            margin: 0;
+            overflow-x: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            max-width: 90%;
+            width: 450px;
+            position: relative;
+            z-index: 10; 
+        }
+        h1 {
+            color: #e63946;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+        .subtitle {
+            font-style: italic;
+            color: #7a7a7a;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        .care-package {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            background: #fff0f0;
+            padding: 15px;
+            border-radius: 15px;
+        }
+        .item {
+            font-size: 35px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            user-select: none;
+        }
+        .item:active {
+            transform: scale(0.9);
+        }
+        #message-box {
+            min-height: 50px;
+            font-weight: bold;
+            color: #e63946;
+            margin-bottom: 25px;
+            padding: 10px;
+            border: 2px dashed #ffb3b3;
+            border-radius: 10px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(230, 57, 70, 0.3);
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        button:hover {
+            background-color: #c1121f;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        .spotify-container {
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .footer {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #a0a0a0;
+        }
+        .heart {
+            position: fixed;
+            font-size: 24px;
+            bottom: -30px;
+            animation: floatUp 4s ease-in forwards;
+            opacity: 0.8;
+            z-index: 1;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 0.8; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Virtual Care Package එකක් 🧸</h1>
+        <div class="subtitle">ඔයා ඔහොම වේදනාවෙන් ඉන්නවට මම කැමති නැති නිසා.</div>
+
+        <div class="care-package">
+            <div class="item" onclick="showMessage('මෙන්න ඔයාට Virtual Chocolate ටිකක්, අමාරුව ටිකක් හරි අඩු වෙන්න! 🍫')">🍫</div>
+            <div class="item" onclick="showMessage('කැක්කුම අඩු වෙන්න මෙන්න උණුසුම් Heating Pad එකක්. ♨️')">♨️</div>
+            <div class="item" onclick="showMessage('ඔයාව ලොකුම, උණුසුම්ම බ්ලැන්කට් එකකින් ඔතනවා වගේ දැනෙන්න. 🫂')">🫂</div>
+            <div class="item" onclick="showMessage('ඔක්කොම වේදනාවන් නැති වෙලා යන්න. ඔයා ගොඩක් strong! 💊')">💊</div>
+        </div>
+
+        <div id="message-box">උඩ තියෙන දේවල් Click කරන්න, නැත්නම් පල්ලෙහා තියෙන Buttons ඔබන්න! 👇</div>
+
+        <div class="action-buttons">
+            <button onclick="sendHug()">හදිසි Hug එකක් ❤️</button>
+            <button onclick="cancerComfort()">ආදරණීය වදන් 🌙</button>
+            <button onclick="distractMe()">හිනා වෙමු 🎲</button>
+        </div>
+
+        <div class="spotify-container">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="footer">
+            ආදරයෙන් හැදුවේ, මිනූගෙන්
+        </div>
+    </div>
+
+    <script>
+        function showMessage(text) {
+            document.getElementById('message-box').innerText = text;
+        }
+
+        // Sinhala Affirmations
+        const affirmations = [
+            "ඔයාට ගොඩක් ලොකු හදවතක් තියෙනවා, ඒත් අද මම ඔයාව බලාගන්නම්. 🦀❤️",
+            "හඳටත් විවිධ කාල තියෙනවා වගේ තමයි. හොඳට විවේක ගන්න මගේ ලස්සන කෙල්ලේ. 🌙",
+            "ඔයාට හැමදාම හරි දේ දැනෙනවනේ, දැන් ඔයාට දැනෙන්නේ නිදාගන්න ඕනෙ කියලා. 🛌",
+            "අද දවසම ඔයාට උණුසුම්, පරිස්සම් හැඟීමක් දැනෙන්න එවනවා. Burrito එකක් වගේ හොඳට ඔතාගෙන ඉන්න. 🌯",
+            "ඔයා අනිත් අය වෙනුවෙන් ගොඩක් දේවල් කරනවා. අද දවස ඔයා වෙනුවෙන්මයි. 💖"
+        ];
+
+        function cancerComfort() {
+            const randomMsg = affirmations[Math.floor(Math.random() * affirmations.length)];
+            showMessage(randomMsg);
+        }
+
+        // Sinhala Distractions (Jokes/Facts)
+        const distractions = [
+            "Fact: Sea Otters ලා නිදාගද්දි අත් අල්ලගෙන ඉන්නේ වතුරේ ගසාගෙන යන්නේ නැති වෙන්නලු. 🦦",
+            "Joke: මොකක්ද කකුල් නැතුව දුවන දේ? වෙලාව! ⏰",
+            "Fact: හාවො ගොඩකට ඉංග්‍රීසියෙන් කියන්නේ 'fluffle' කියලලු. 🐇",
+            "Joke: ඇටසැකිලි ඇයි කවදාවත් රණ්ඩු වෙන්නේ නැත්තේ? ඒගොල්ලන්ට 'guts' (ධෛර්යය) නැති නිසා! 💀",
+            "Fact: හරකුන්ටත් හොඳම යාළුවො ඉන්නවලු, එයාලා වෙන් වුණාම එයාලටත් දුක හිතෙනවලු. 🐄"
+        ];
+
+        function distractMe() {
+            const randomDistraction = distractions[Math.floor(Math.random() * distractions.length)];
+            showMessage(randomDistraction);
+        }
+
+        // Floating Hearts Animation
+        function sendHug() {
+            for (let i = 0; i < 15; i++) {
+                setTimeout(createHeart, i * 100); 
+            }
+            showMessage("මෙන්න ඔයාට ලොකුම ලොකු Hug එකක්! මම ඔයාට ගොඩක් ආදරෙයි!");
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 4000);
+        }
+    </script>
+</body>
+</html>
